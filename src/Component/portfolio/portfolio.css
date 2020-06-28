@@ -1,0 +1,142 @@
+.Portfolio{
+    float: left;
+    text-align: center;
+    position: relative;
+}
+
+.Portfolio h2{
+    font-size: 2em;
+    color: #3b53d9;
+    margin: 10px 0px;
+}
+
+.Portfolio .overlay{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #7a000866;
+    display: none;
+    z-index: 999999;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+.Portfolio .overlay img{
+    margin-top: 20px;
+    width: 80%;
+    margin-left: 5%;
+}
+.Portfolio .overlay .fa{
+    position: fixed;
+    right: 2.4%;
+    font-size: 40px;
+    margin: 10px;
+    color: #fff;
+    background-color: #a70000;
+    padding: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Portfolio .content{
+    width: 25%;
+    float: left;
+    height: 240px;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 0px #3b53d9;
+    overflow: hidden;
+}
+
+.Portfolio .content img{width: 100%;}
+
+.Portfolio .zoom_btn_div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #c05ee76e;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.Portfolio .content:hover .zoom_btn_div{
+    opacity: 1;
+}
+
+.Portfolio .zoom_btn_div .zoom_btn{
+    position: absolute;
+    top: 32%;
+    left: 20%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    line-height: 2em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 10px #000;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.Portfolio .content:hover .zoom_btn_div:hover .zoom_btn{
+    opacity: 1;
+    left: 40%;
+}
+
+/*For Mobile Media*/
+@media(max-width:767px){
+    .Portfolio{
+        margin: 0;
+        width: 100%;
+        padding-top: 80px;
+    }
+    .Portfolio>.content{
+        width: 80%;
+        margin:15px auto;
+        float: none;
+        height: 240px;
+    }
+    .Portfolio h2{ 
+        margin-bottom: 30px;
+    }
+    .Portfolio .overlay img{
+        margin-left: -5%;
+    }
+}
+@media(min-width:768px){
+    .Portfolio{
+        width: 84%;
+        padding-top: 20px;
+        margin-left: 16%;
+    }
+    .Portfolio h2{
+        margin-bottom: 30px;
+    }
+    .Portfolio .content{
+        width: 40%;
+        float: left;
+        margin: 10px 5%;
+    }
+}
+
+@media(min-width:1200px){
+    .Portfolio{
+        width: 90%;
+        float: left;
+        margin-left: 10%;
+        padding-top: 0;
+    }
+    .Portfolio .content{
+        width: 25%;
+        float: left;
+        margin:10px 4.16667% !important
+    }
+}
